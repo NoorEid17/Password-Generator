@@ -1,0 +1,115 @@
+:root {
+  --background-color: #100f15;
+  --primary-color: #24232b;
+  --green: #a9fbb3;
+  --grey: #4d4e56;
+}
+
+* {
+  font-family: "Fira Code", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: white;
+  font-size: 22px;
+}
+
+.wrapper {
+  width: 32%;
+  margin: 6rem auto;
+}
+.wrapper .title {
+  text-align: center;
+  color: var(--grey);
+}
+.wrapper section {
+  margin-top: 0.75rem;
+  background-color: var(--primary-color);
+  padding: 0.5rem 2.25rem;
+}
+.wrapper section > div {
+  margin-top: 0.75rem;
+}
+.wrapper div.character-length-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.wrapper section.result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.wrapper section.result p {
+  color: var(--grey);
+  font-weight: bold;
+}
+.wrapper section.result img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.wrapper .checkbox-list {
+  margin: 2rem 0;
+}
+.wrapper .field {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2.5rem;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+.wrapper .field input[type=checkbox] {
+  margin: 0;
+  accent-color: var(--green);
+  width: 20px;
+  height: 20px;
+}
+.wrapper section.options {
+  padding: 1.5rem 2.25rem;
+}
+.wrapper .strength {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .strength > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .strength .stength-box {
+  display: inline-block;
+  margin-left: 0.35rem;
+  width: 15px;
+  height: 2rem;
+  border: 5px solid var(--background-color);
+}
+.wrapper .generate-button {
+  width: 100%;
+  text-align: center;
+}
+.wrapper .generate-button button {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: var(--green);
+  color: var(--background-color);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: 2px solid var(--green);
+  transition: all 0.4s;
+}
+.wrapper .generate-button button:hover {
+  background: transparent;
+  color: var(--green);
+  border-color: var(--green);
+}
+
+/*# sourceMappingURL=index.css.map */

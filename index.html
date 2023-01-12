@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="range-slide.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h3 class="title">Password Generator</h3>
+      <section class="result">
+        <p class="result" id="password-result">P4SW%RD</p>
+        <img src="copy.png" id="clipboard" />
+      </section>
+      <section class="options">
+        <div>
+          <div class="character-length-info">
+            <span>Character Length</span>
+            <span id="character-length">0</span>
+          </div>
+          <div class="slider-wrapper">
+            <input
+              type="range"
+              min="8"
+              max="30"
+              value="8"
+              class="slider"
+              id="myRange"
+            />
+          </div>
+        </div>
+        <div class="checkbox-list">
+          <div class="field">
+            <input type="checkbox" id="include-upper" checked />
+            <label>Include Uppercase letters</label>
+          </div>
+          <div class="field">
+            <input type="checkbox" id="include-lower" checked />
+            <label>Include Lowercase letters</label>
+          </div>
+          <div class="field">
+            <input type="checkbox" id="include-numbers" />
+            <label>Include Numbers</label>
+          </div>
+          <div class="field">
+            <input type="checkbox" id="include-symbols" />
+            <label>Include Symbols</label>
+          </div>
+        </div>
+        <div class="strength">
+          <span>strength</span>
+          <div>
+            <span class="password-level">Easy</span>
+            <span class="stength-box"></span>
+            <span class="stength-box"></span>
+            <span class="stength-box"></span>
+            <span class="stength-box"></span>
+          </div>
+        </div>
+        <div class="generate-button">
+          <button id="generate-btn">Generate <img src="next.png" /></button>
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
