@@ -1,14 +1,10 @@
-/**
- * Most Spaghetti code i've ever written
- */
-
-var slider = document.getElementById("myRange");
-var output = document.getElementById("character-length");
+var characterLengthSlider = document.getElementById("myRange");
+var characterLengthDisplay = document.getElementById("character-length");
 var generateButton = document.getElementById("generate-btn");
 var passwordResult = document.getElementById("password-result");
 var clipboardButton = document.getElementById("clipboard");
 
-output.innerHTML = slider.value; // Display the default slider value
+characterLengthDisplay.innerHTML = characterLengthSlider.value; // Display the default slider value
 
 String.prototype.shuffle = function () {
   var a = this.split(""),
@@ -24,8 +20,8 @@ String.prototype.shuffle = function () {
 };
 
 // Update the current slider value (each time you drag the slider handle)
-slider.oninput = function () {
-  output.innerHTML = this.value;
+characterLengthSlider.oninput = function () {
+  characterLengthDisplay.innerHTML = this.value;
 };
 
 const defaultOptions = {
@@ -82,7 +78,7 @@ generateButton.onclick = () => {
     includeUppercase: document.getElementById("include-upper").checked,
     includeNumbers: document.getElementById("include-numbers").checked,
     includeSymbols: document.getElementById("include-symbols").checked,
-    length: slider.value,
+    length: characterLengthSlider.value,
   };
   const password = generatePassword(options);
   console.log(options);
